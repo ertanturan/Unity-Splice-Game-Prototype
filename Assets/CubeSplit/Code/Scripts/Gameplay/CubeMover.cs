@@ -6,7 +6,20 @@ public class CubeMover : MonoBehaviour
     public Axes Axis;
     [SerializeField] private float _moveSpeed = 2f;
 
-    void Update()
+    private void Awake()
+    {
+        InputManager.Instance.Held += OnHeld;
+    }
+
+    private void OnDestroy()
+    {
+        if (InputManager.Instance)
+        {
+            InputManager.Instance.Held -= OnHeld;
+        }
+    }
+
+    private void OnHeld(object sender, InputEventArgs args)
     {
         Move();
     }
@@ -32,5 +45,7 @@ public class CubeMover : MonoBehaviour
                 transform.position = currentPos;
                 break;
         }
+
     }
+
 }
