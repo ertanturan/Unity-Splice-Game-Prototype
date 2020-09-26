@@ -57,7 +57,7 @@ public class Player : SceneSingleton<Player>
 
         float cubeEdge = transform.position.x + (newXSize / 2) * -1;
 
-        float newXPosition = blade.transform.position.x + 2 * hangOver;
+        float newXPosition = blade.transform.position.x + newXSize;
 
         transform.localScale = new Vector3(newXSize, transform.localScale.y, transform.localScale.z);
         transform.position = new Vector3(newXPosition, transform.position.y, transform.position.z);
@@ -80,7 +80,7 @@ public class Player : SceneSingleton<Player>
 
 
         Vector3 cubeScale = new Vector3(fallingCubeSize, transform.localScale.y, transform.localScale.z);
-        Vector3 cubePos = new Vector3(fallingCubePos - 2 * hangOver, transform.position.y, transform.position.z);
+        Vector3 cubePos = new Vector3(fallingCubePos - fallingCubeSize, transform.position.y, transform.position.z);
 
 
         GameObject cube = ObjectPooler.Instance.SpawnFromPool(PooledObjectType.DroppedCube, cubePos, Quaternion.identity);
