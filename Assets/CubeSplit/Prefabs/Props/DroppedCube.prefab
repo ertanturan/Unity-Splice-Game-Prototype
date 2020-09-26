@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 9093608868736929341}
   - component: {fileID: 3442620685426093072}
   - component: {fileID: 4478037785117234762}
+  - component: {fileID: 8796451197319187446}
   m_Layer: 0
   m_Name: DroppedCube
   m_TagString: Untagged
@@ -110,3 +111,15 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &8796451197319187446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1020984628375563458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8f3d5395a3ea1744a5a55ea71eda83b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

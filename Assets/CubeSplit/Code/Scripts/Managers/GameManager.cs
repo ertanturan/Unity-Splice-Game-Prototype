@@ -1,23 +1,24 @@
-﻿using UnityEngine.SceneManagement;
+﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : SceneSingleton<GameManager>
 {
 
-    //public bool IsFailed(float hangover, Blade blade)
-    //{
-    //    return true;
-    //    //if (Mathf.Abs(hangover) >= blade.transform.localScale.x)
-    //    //{
-    //    //    //Reload();
-    //    //    return true;
-    //    //}
-
-    //    //return false;
-    //}
 
     private void Reload()
     {
         SceneManager.LoadScene(0);
     }
 
+    public bool IsTargetVisible(Camera c, GameObject go)
+    {
+        var planes = GeometryUtility.CalculateFrustumPlanes(c);
+        var point = go.transform.position;
+        foreach (var plane in planes)
+        {
+            if (plane.GetDistanceToPoint(point) < 0)
+                return false;
+        }
+        return true;
+    }
 }

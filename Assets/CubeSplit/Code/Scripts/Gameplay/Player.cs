@@ -3,12 +3,12 @@
 public class Player : SceneSingleton<Player>
 {
 
-    private float _initialScale;
+    //private float _initialScale;
 
-    private void Awake()
-    {
-        _initialScale = transform.localScale.x;
-    }
+    //private void Awake()
+    //{
+    //    _initialScale = transform.localScale.x;
+    //}
 
     public void Hit(Blade blade)
     {
@@ -36,7 +36,7 @@ public class Player : SceneSingleton<Player>
 
 
         float hangOver = transform.position.x - blade.transform.position.x;
-        hangOver = _initialScale - hangOver;
+        hangOver = transform.localScale.x - hangOver;
         Debug.Log(hangOver);
         SplitCubeOnX(blade, hangOver);
 

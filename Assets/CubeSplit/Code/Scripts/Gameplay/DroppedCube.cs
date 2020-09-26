@@ -1,17 +1,12 @@
 ﻿using UnityEngine;
 
-public class Guillotine : MonoBehaviour, IPooledObject
+public class DroppedCube : MonoBehaviour, IPooledObject
 {
-    private Blade _blade;
+    public PooledObjectType PoolType { get; set; }
+
     private bool _seenOnce = false;
     private bool _shoulCount = false;
 
-    private void Awake()
-    {
-        _blade = GetComponentInChildren<Blade>();
-    }
-
-    public PooledObjectType PoolType { get; set; }
     public void Init()
     {
 
@@ -23,6 +18,7 @@ public class Guillotine : MonoBehaviour, IPooledObject
 
     public void OnObjectDespawn()
     {
+        transform.localScale = Vector3.one;
         _seenOnce = false;
         _shoulCount = false;
     }
@@ -31,6 +27,7 @@ public class Guillotine : MonoBehaviour, IPooledObject
     {
         ObjectPooler.Instance.Despawn(gameObject);
     }
+
 
     private void Update()
     {
@@ -53,6 +50,7 @@ public class Guillotine : MonoBehaviour, IPooledObject
             }
         }
     }
+
 
 
 }
