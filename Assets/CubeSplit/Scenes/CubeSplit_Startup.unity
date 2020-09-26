@@ -214,49 +214,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &216248427 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2203659761733702915, guid: d9758d54c4ba272489ff45d74e8a5c74,
-    type: 3}
-  m_PrefabInstance: {fileID: 2203659761786168680}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &216248428
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 216248427}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d388ea17f51b044a91d19a202989010, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &216248429
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 216248427}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 163632ed5015b244c88367783f9e273e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _distanceBetween: 15
---- !u!114 &216248430
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 216248427}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da2b4bb06c06f4f49a7a9492326219c8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &878736395
 GameObject:
   m_ObjectHideFlags: 0
@@ -542,27 +499,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Managers
-      objectReference: {fileID: 0}
-    - target: {fileID: 2203659761733702916, guid: d9758d54c4ba272489ff45d74e8a5c74,
-        type: 3}
-      propertyPath: Pool.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2203659761733702916, guid: d9758d54c4ba272489ff45d74e8a5c74,
-        type: 3}
-      propertyPath: Pool.Array.data[1].Prefab
-      value: 
-      objectReference: {fileID: 769335604003350514, guid: 26b63d051170a9e49bb6ac565cd28713,
-        type: 3}
-    - target: {fileID: 2203659761733702916, guid: d9758d54c4ba272489ff45d74e8a5c74,
-        type: 3}
-      propertyPath: Pool.Array.data[1].Size
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2203659761733702916, guid: d9758d54c4ba272489ff45d74e8a5c74,
-        type: 3}
-      propertyPath: Pool.Array.data[1].Tag
-      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2203659761733702917, guid: d9758d54c4ba272489ff45d74e8a5c74,
         type: 3}
