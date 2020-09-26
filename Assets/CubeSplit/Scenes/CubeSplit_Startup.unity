@@ -245,6 +245,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _distanceBetween: 15
+--- !u!114 &216248430
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 216248427}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da2b4bb06c06f4f49a7a9492326219c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &878736395
 GameObject:
   m_ObjectHideFlags: 0
@@ -508,7 +520,7 @@ PrefabInstance:
     - target: {fileID: 2203659761733702917, guid: d9758d54c4ba272489ff45d74e8a5c74,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2203659761733702917, guid: d9758d54c4ba272489ff45d74e8a5c74,
         type: 3}
@@ -527,7 +539,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d9758d54c4ba272489ff45d74e8a5c74, type: 3}
---- !u!1001 &5401622422765673359
+--- !u!1001 &8660784974616302716
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -539,20 +551,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 5401622421578917442, guid: 86d60f8b764fa4641b9bbce8ab5b06a1,
-        type: 3}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
     - target: {fileID: 5401622421578917470, guid: 86d60f8b764fa4641b9bbce8ab5b06a1,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 5401622421578917470, guid: 86d60f8b764fa4641b9bbce8ab5b06a1,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5401622421578917470, guid: 86d60f8b764fa4641b9bbce8ab5b06a1,
         type: 3}
@@ -582,7 +589,7 @@ PrefabInstance:
     - target: {fileID: 5401622421578917470, guid: 86d60f8b764fa4641b9bbce8ab5b06a1,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5401622421578917470, guid: 86d60f8b764fa4641b9bbce8ab5b06a1,
         type: 3}
