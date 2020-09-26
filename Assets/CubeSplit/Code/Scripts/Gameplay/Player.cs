@@ -10,6 +10,12 @@ public class Player : SceneSingleton<Player>
     //    _initialScale = transform.localScale.x;
     //}
 
+    private void Awake()
+    {
+        transform.GetChild(0).GetComponent<Renderer>().material.SetColor("_Color", GameManager.Instance.GetRandomColor());
+    }
+
+
     public void Hit(Blade blade)
     {
 
@@ -86,15 +92,19 @@ public class Player : SceneSingleton<Player>
         GameObject cube = ObjectPooler.Instance.SpawnFromPool(PooledObjectType.DroppedCube, cubePos, Quaternion.identity);
         cube.transform.localScale = cubeScale;
 
+        cube.GetComponent<Renderer>().material.color = transform.GetChild(0).GetComponent<Renderer>().material.color;
+
+
+        transform.GetChild(0).GetComponent<Renderer>().material.SetColor("_Color", GameManager.Instance.IntensifyColor(transform.GetChild(0).GetComponent<Renderer>().material.color));
+
         Rigidbody rb = cube.GetComponent<Rigidbody>();
         rb.useGravity = true;
         rb.isKinematic = false;
 
         rb.AddForce(cube.transform.right * -1 * 100);
-
-
-
+        rb.AddForce(cube.transform.up * 50);
     }
+
 
 
 }
