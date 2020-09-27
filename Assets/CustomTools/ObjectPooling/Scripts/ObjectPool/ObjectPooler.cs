@@ -10,7 +10,7 @@ public class ObjectPooler : SceneSingleton<ObjectPooler>
     private Dictionary<PooledObjectType, int> _poolIndexes = new Dictionary<PooledObjectType, int>();
     private Dictionary<PooledObjectType, Transform> _poolMasters = new Dictionary<PooledObjectType, Transform>();
 
-    private void Start()
+    private void Awake()
     {
         PoolDictionary = new Dictionary<PooledObjectType, Queue<GameObject>>();
 
