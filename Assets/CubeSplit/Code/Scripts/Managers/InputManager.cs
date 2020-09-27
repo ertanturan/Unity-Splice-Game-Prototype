@@ -11,12 +11,16 @@ public class InputManager : SceneSingleton<InputManager>
     public delegate void OnHeldEventHandler(object sender, InputEventArgs args);
     public event OnHeldEventHandler Held;
 
+    public delegate void OnMouseUpEventHandler(object sender, InputEventArgs args);
+
+    public event OnMouseUpEventHandler MouseReleased;
 
     private void Update()
     {
 
         CheckHeld();
         CheckPressed();
+        CheckMouseUp();
 
     }
 
@@ -33,6 +37,14 @@ public class InputManager : SceneSingleton<InputManager>
         if (Input.GetMouseButton(0))
         {
             OnHeld();
+        }
+    }
+
+    private void CheckMouseUp()
+    {
+        if (Input.GetMouseButtonUp(0))
+        {
+            OnMouseReleased();
         }
     }
 
@@ -55,4 +67,12 @@ public class InputManager : SceneSingleton<InputManager>
         }
     }
 
+
+    private void OnMouseReleased()
+    {
+        if (MouseReleased != null)
+        {
+            MouseReleased(this, new InputEventArgs());
+        }
+    }
 }

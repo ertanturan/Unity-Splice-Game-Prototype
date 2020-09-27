@@ -6,6 +6,14 @@ public class GameManager : SceneSingleton<GameManager>
     private int _currentPoint = 0;
     private float _currentDistance;
 
+    private bool _isPlaying = false;
+
+    public bool IsPlaying
+    {
+        get { return _isPlaying; }
+        private set { _isPlaying = value; }
+    }
+
     private void Reload()
     {
         SceneManager.LoadScene(0);
@@ -65,5 +73,16 @@ public class GameManager : SceneSingleton<GameManager>
     public float CalculateDistance()
     {
         return Player.Instance.transform.position.x - 1;
+    }
+
+    public void StartGame()
+    {
+        IsPlaying = true;
+
+    }
+    public void StopGame()
+    {
+        IsPlaying = false;
+
     }
 }

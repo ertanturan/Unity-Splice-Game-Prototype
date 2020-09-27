@@ -26,6 +26,9 @@ public class SceneGenerator : MonoBehaviour
             GameObject obj = ObjectPooler.Instance.SpawnFromPool(PooledObjectType.Guillotine, startPos, Quaternion.identity);
             startPos.x += _distanceBetween;
             _targetDistance += _distanceBetween;
+
+            GameObject primitive = GameObject.CreatePrimitive(PrimitiveType.Cube);
+            primitive.transform.position = new Vector3(i * _distanceBetween / 2, 1, 6);
         }
     }
 
