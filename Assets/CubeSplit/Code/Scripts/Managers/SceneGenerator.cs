@@ -28,7 +28,7 @@ public class SceneGenerator : MonoBehaviour
             _targetDistance += _distanceBetween;
 
             GameObject primitive = GameObject.CreatePrimitive(PrimitiveType.Cube);
-            primitive.transform.position = new Vector3(i * _distanceBetween / 2, 1, 6);
+            primitive.transform.position = new Vector3(startPos.x, 1, 6);
         }
     }
 
