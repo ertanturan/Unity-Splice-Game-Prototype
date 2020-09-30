@@ -212,7 +212,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &878736395
 GameObject:
@@ -634,7 +634,7 @@ PrefabInstance:
     - target: {fileID: 5401622421578917470, guid: 86d60f8b764fa4641b9bbce8ab5b06a1,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5401622421578917470, guid: 86d60f8b764fa4641b9bbce8ab5b06a1,
         type: 3}
@@ -664,6 +664,27 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Managers
+      objectReference: {fileID: 0}
+    - target: {fileID: 2203659761733702916, guid: d9758d54c4ba272489ff45d74e8a5c74,
+        type: 3}
+      propertyPath: Pool.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2203659761733702916, guid: d9758d54c4ba272489ff45d74e8a5c74,
+        type: 3}
+      propertyPath: Pool.Array.data[2].Tag
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2203659761733702916, guid: d9758d54c4ba272489ff45d74e8a5c74,
+        type: 3}
+      propertyPath: Pool.Array.data[2].Prefab
+      value: 
+      objectReference: {fileID: 1838860287820144008, guid: 7213a41c5e6b9e74aaf54e20867febdf,
+        type: 3}
+    - target: {fileID: 2203659761733702916, guid: d9758d54c4ba272489ff45d74e8a5c74,
+        type: 3}
+      propertyPath: Pool.Array.data[2].Size
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2203659761733702917, guid: d9758d54c4ba272489ff45d74e8a5c74,
         type: 3}

@@ -51,8 +51,8 @@ public class SceneGenerator : MonoBehaviour
 
     private void SpawnSideEnvironment()
     {
-        GameObject primitive = GameObject.CreatePrimitive(PrimitiveType.Cube);
-        primitive.transform.position = new Vector3(startPos.x, 1, 6);
+        GameObject primitive = ObjectPooler.Instance.SpawnFromPool(PooledObjectType.Light,
+            new Vector3(startPos.x - _distanceBetween, -.5f, 3), Quaternion.identity);
     }
 
     private void SpawnGoillotine(int index, Vector3 start)
