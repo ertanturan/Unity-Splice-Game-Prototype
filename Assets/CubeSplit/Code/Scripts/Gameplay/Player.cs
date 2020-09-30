@@ -82,7 +82,7 @@ public class Player : SceneSingleton<Player>
 
         Debug.Log(angle);
 
-        if (angle < 95)
+        if (angle < 90)
         {
             return false;
         }
