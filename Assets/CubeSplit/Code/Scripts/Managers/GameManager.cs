@@ -80,9 +80,11 @@ public class GameManager : SceneSingleton<GameManager>
         IsPlaying = true;
 
     }
+
     public void StopGame()
     {
         IsPlaying = false;
 
     }
+
 }

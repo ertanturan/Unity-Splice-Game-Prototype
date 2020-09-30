@@ -31,42 +31,68 @@ SpriteAtlas:
     variantMultiplier: 1
     packables:
     - {fileID: 102900000, guid: bbd5e8e73db255e47abf4bfedf8aa220, type: 3}
-    totalSpriteSurfaceArea: 3726513
+    totalSpriteSurfaceArea: 3599361
     bindAsDefault: 1
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
+  - {fileID: 21300000, guid: d232561045ae7bc409b5ddce24fe2fad, type: 3}
+  - {fileID: 21300000, guid: cbdb9b905403f104cac432f8c69dc277, type: 3}
+  - {fileID: 21300000, guid: 34f4e4b03a016d2498423b9cd8259c46, type: 3}
   - {fileID: 21300000, guid: 1a9179010b0c8c648a51e92b877a54fa, type: 3}
   - {fileID: 21300000, guid: 75f0e6b1a6523af478d510d598138e62, type: 3}
   - {fileID: 21300000, guid: 7224f5c19a2b4df47884361cb044e3c2, type: 3}
   - {fileID: 21300000, guid: 2fd82c021296a7e478f69ff75f97c589, type: 3}
   - {fileID: 21300000, guid: 979637422dc500c43ba7d3a71bf93b7e, type: 3}
-  - {fileID: 21300000, guid: 9bafd6c46be059145878e8ad5211e139, type: 3}
+  - {fileID: 21300000, guid: dab61ee2be983c9449f010cd672b43fc, type: 3}
+  - {fileID: 21300000, guid: 2b882b5307ac2a74cb44a651d0895060, type: 3}
+  - {fileID: 21300000, guid: d9f35b5375bc5ee45842c317861e27fc, type: 3}
+  - {fileID: 21300000, guid: 8bebafb458725eb4ca2cd437157122da, type: 3}
   - {fileID: 21300000, guid: e3d117054e5910d4fb7229a0aa17049e, type: 3}
   - {fileID: 21300000, guid: 07fd7885db34c7a4aacffef51197d37e, type: 3}
-  - {fileID: 21300000, guid: cc2a63076ba54704ebefc7f6620b4774, type: 3}
+  - {fileID: 21300000, guid: 3dde77d626513e140983d8bdca3eef6c, type: 3}
+  - {fileID: 21300000, guid: 61202d4779dbf8943bec9e8920752af9, type: 3}
   - {fileID: 21300000, guid: 6fc31c98c9688e442b720859ec2a531f, type: 3}
-  - {fileID: 21300000, guid: fa6ba3397f2bee5449c1d470f2d0bae9, type: 3}
+  - {fileID: 21300000, guid: 0dfbb0f838f8fb14fb52b8dba1252e4f, type: 3}
   - {fileID: 21300000, guid: 29446c2bba5ea6f4983155fb36d3e701, type: 3}
-  - {fileID: 21300000, guid: 08d0444bf4da3c146b1e829cb83b9825, type: 3}
+  - {fileID: 21300000, guid: bd55f85b1334099439fc216968c63079, type: 3}
+  - {fileID: 21300000, guid: 35b7e07ba126fbc48bce796eaab3d628, type: 3}
+  - {fileID: 21300000, guid: f6f2f90c2bac28144b4e4032c70c15e0, type: 3}
   - {fileID: 21300000, guid: 822412fcb23840e4e93fb7b8b59972e6, type: 3}
+  - {fileID: 21300000, guid: 95c7e7fc086828443b72cb6b2f5ff7e0, type: 3}
+  - {fileID: 21300000, guid: c0fec5de49feb114aad491bb0423036a, type: 3}
   - {fileID: 21300000, guid: aed91f3ff88e2dc46a741ed4b1641f7c, type: 3}
+  - {fileID: 21300000, guid: 1160905f7dfc6094896efc3687b6b662, type: 3}
   - {fileID: 21300000, guid: 3e90c15f3a71b7c4fa00d40271e75074, type: 3}
+  - {fileID: 21300000, guid: 14c576bf37943ad409e13297ce2bb734, type: 3}
   m_PackedSpriteNamesToIndex:
+  - buton-1-normal
+  - coin
+  - toggle-on
   - para
   - bar
   - pause-normal
   - pause-click
   - list-normal
-  - slow-click
+  - toggle-off
+  - play
+  - buton-1-click
+  - ads-normal
   - logo
   - list-click
-  - play-normal
+  - kapat-click
+  - zaman
   - Asset 1
-  - play-click
+  - kapat-normal
   - firepod
-  - slow-normal
+  - buton-2-click
+  - duraklat-click
+  - board
   - ayar-click
+  - duraklat-normal
+  - buton-2-normal
   - ayar-normal
+  - ads-off
   - bar-2
+  - slow
   m_Tag: UI
   m_IsVariant: 0

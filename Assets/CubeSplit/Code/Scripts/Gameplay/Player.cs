@@ -3,60 +3,31 @@
 public class Player : SceneSingleton<Player>
 {
 
-    //private float _initialScale;
 
-    //private void Awake()
-    //{
-    //    _initialScale = transform.localScale.x;
-    //}
 
     private void Awake()
     {
         transform.GetChild(0).GetComponent<Renderer>().material.SetColor("_Color", GameManager.Instance.GetRandomColor());
     }
 
-
     public void Hit(Blade blade)
     {
 
+        if (CheckAngle(blade))
+        {
 
-        //float hangOver = blade.transform.position.x - transform.position.x;
+            float hangOver = transform.position.x - blade.transform.position.x;
+            hangOver = transform.localScale.x - hangOver;
+            Debug.Log(hangOver);
+            SplitCubeOnX(blade, hangOver);
 
-        //if (hangOver > 0)
-        //{
-        //    hangOver = Mathf.Clamp(hangOver, 0, _halfScale);
-        //    hangOver = _halfScale - hangOver;
-        //}
-        //else
-        //{
-        //    hangOver = Mathf.Clamp(hangOver, -_halfScale, 0);
-        //    hangOver = _halfScale - hangOver;
-        //}
-
-        //hangOver -= 1;
-
-
-        //float dir = hangOver < 0 ? -1 : 1;
-        ////float dir = 1f;
-        //SplitCubeOnX(blade, hangOver, dir);
-
-
-        float hangOver = transform.position.x - blade.transform.position.x;
-        hangOver = transform.localScale.x - hangOver;
-        Debug.Log(hangOver);
-        SplitCubeOnX(blade, hangOver);
-
+        }
 
 
     }
 
-
     private void SplitCubeOnX(Blade blade, float hangOver)
     {
-
-
-
-
 
         float newXSize = transform.localScale.x - Mathf.Abs(hangOver);
         float fallingCubeSize = transform.localScale.x - newXSize;
@@ -70,15 +41,9 @@ public class Player : SceneSingleton<Player>
 
         float fallingCubePos = cubeEdge - fallingCubeSize / 2 * -1;
 
-        Debug.Log(fallingCubePos);
         SpawnDroppingCube(fallingCubePos, fallingCubeSize, hangOver);
 
-
-
     }
-
-
-
 
     private void SpawnDroppingCube(float fallingCubePos, float fallingCubeSize, float hangOver)
     {
@@ -106,5 +71,27 @@ public class Player : SceneSingleton<Player>
     }
 
 
+
+    private bool CheckAngle(Blade blade)
+    {
+
+
+        Vector3 dir = blade.transform.position - transform.position;
+
+        float angle = Vector3.Angle(dir, transform.right);
+
+        Debug.Log(angle);
+
+        if (angle < 90)
+        {
+            return false;
+        }
+        else
+        {
+            return true;
+        }
+
+
+    }
 
 }
