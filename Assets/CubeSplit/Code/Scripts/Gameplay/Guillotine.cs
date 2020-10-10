@@ -17,7 +17,7 @@ public class Guillotine : MonoBehaviour, IPooledObject
     public PooledObjectType PoolType { get; set; }
     public void Init()
     {
-        _animator.SetFloat("speed", Random.Range(1, 3));
+        _animator.SetFloat("speed", 2.5f);
     }
 
     public void OnObjectSpawn()

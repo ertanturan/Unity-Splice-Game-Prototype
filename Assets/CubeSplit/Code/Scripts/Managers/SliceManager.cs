@@ -21,6 +21,8 @@ public class SliceManager : SceneSingleton<SliceManager>
             upper.AddComponent<MeshCollider>().convex = true;
             upper.AddComponent<Rigidbody>();
 
+            AudioManager.Instance.PlaySlice();
+
         }
     }
 
