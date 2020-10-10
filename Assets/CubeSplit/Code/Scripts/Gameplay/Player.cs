@@ -18,7 +18,7 @@ public class Player : SceneSingleton<Player>
 
             float hangOver = transform.position.x - blade.transform.position.x;
             hangOver = transform.localScale.x - hangOver;
-            Debug.Log(hangOver);
+            //Debug.Log(hangOver);
             SplitCubeOnX(blade, hangOver);
 
         }
@@ -80,7 +80,7 @@ public class Player : SceneSingleton<Player>
 
         float angle = Vector3.Angle(dir, transform.right);
 
-        Debug.Log(angle);
+        //Debug.Log(angle);
 
         if (angle < 90)
         {
