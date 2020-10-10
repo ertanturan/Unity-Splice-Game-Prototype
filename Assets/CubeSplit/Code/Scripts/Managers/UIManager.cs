@@ -1,10 +1,18 @@
-﻿using TMPro;
+﻿using System.Collections;
+using TMPro;
 using UnityEngine;
 
 public class UIManager : SceneSingleton<UIManager>
 {
     [SerializeField] private TextMeshProUGUI _distanceText;
-    [SerializeField] private TextMeshProUGUI _pointText;
+    [SerializeField] private TextMeshProUGUI[] _pointText;
+
+
+    [SerializeField] private WindowUI _settingsWindow;
+    [SerializeField] private WindowUI _failWindow;
+    [SerializeField] private WindowUI _inGameWindow;
+
+    private WaitForSeconds _waitFor = new WaitForSeconds(2);
 
     private void SetDistance(float dist)
     {
@@ -13,7 +21,11 @@ public class UIManager : SceneSingleton<UIManager>
 
     private void SetPoints(int point)
     {
-        _pointText.text = point.ToString();
+        for (int i = 0; i < _pointText.Length; i++)
+        {
+            _pointText[i].text = point.ToString();
+
+        }
     }
 
     private void Update()
@@ -21,4 +33,17 @@ public class UIManager : SceneSingleton<UIManager>
         SetDistance(GameManager.Instance.CalculateDistance());
         SetPoints(GameManager.Instance.CalculatePoint());
     }
+
+    public void ShowFailWindow()
+    {
+        _inGameWindow.Hide();
+        StartCoroutine(DelayedWindow(_failWindow));
+    }
+
+    private IEnumerator DelayedWindow(WindowUI window)
+    {
+        yield return _waitFor;
+        window.Show();
+    }
+
 }

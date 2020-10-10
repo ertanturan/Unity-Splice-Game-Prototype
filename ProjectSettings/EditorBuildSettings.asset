@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/MeshSlice/Scenes/Main.unity
-    guid: fd4329823d1f74e419598b3c551f8d66
+    path: Assets/CubeSplit/Scenes/CubeSplit_Startup.unity
+    guid: 47ac4933f835733439982672239f5bc5
   m_configObjects: {}
