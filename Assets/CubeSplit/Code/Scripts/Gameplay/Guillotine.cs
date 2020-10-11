@@ -6,19 +6,23 @@ public class Guillotine : MonoBehaviour, IPooledObject
     private bool _seenOnce = false;
     private bool _shoulCount = false;
 
+    private Animator _animator;
+
     private void Awake()
     {
         _blade = GetComponentInChildren<Blade>();
+        _animator = GetComponentInChildren<Animator>();
     }
 
     public PooledObjectType PoolType { get; set; }
     public void Init()
     {
-
+        _animator.SetFloat("speed", 1.8f);
     }
 
     public void OnObjectSpawn()
     {
+
     }
 
     public void OnObjectDespawn()

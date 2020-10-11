@@ -7,21 +7,29 @@ public class Player : SceneSingleton<Player>
 
     private void Awake()
     {
-        transform.GetChild(0).GetComponent<Renderer>().material.SetColor("_Color", GameManager.Instance.GetRandomColor());
+        //GetComponent<Renderer>().material.SetColor("_Color", GameManager.Instance.GetRandomColor());
     }
 
     public void Hit(Blade blade)
     {
+        //Debug.Log(CheckAngle(blade));
+        //if (CheckAngle(blade))
+        //{
+        //    //OLD
 
-        if (CheckAngle(blade))
+        //float hangOver = transform.position.x - blade.transform.position.x;
+        //hangOver = transform.localScale.x - hangOver;
+        ////Debug.Log(hangOver);
+        //SplitCubeOnX(blade, hangOver);
+
+        if (CheckAngle(blade) && SliceManager.Instance.Slice(gameObject, GetComponent<Renderer>().material, blade.transform))
         {
-
-            float hangOver = transform.position.x - blade.transform.position.x;
-            hangOver = transform.localScale.x - hangOver;
-            Debug.Log(hangOver);
-            SplitCubeOnX(blade, hangOver);
+            GameManager.Instance.Fail();
 
         }
+
+
+        //}
 
 
     }
@@ -70,8 +78,6 @@ public class Player : SceneSingleton<Player>
         rb.AddForce(cube.transform.up * 50);
     }
 
-
-
     private bool CheckAngle(Blade blade)
     {
 
@@ -80,9 +86,9 @@ public class Player : SceneSingleton<Player>
 
         float angle = Vector3.Angle(dir, transform.right);
 
-        Debug.Log(angle);
+        //Debug.Log(angle);
 
-        if (angle < 90)
+        if (angle > 20)
         {
             return false;
         }
