@@ -22,9 +22,8 @@ public class Player : SceneSingleton<Player>
         ////Debug.Log(hangOver);
         //SplitCubeOnX(blade, hangOver);
 
-        if (CheckAngle(blade))
+        if (CheckAngle(blade) && SliceManager.Instance.Slice(gameObject, GetComponent<Renderer>().material, blade.transform))
         {
-            SliceManager.Instance.Slice(gameObject, GetComponent<Renderer>().material, blade.transform);
             GameManager.Instance.Fail();
 
         }

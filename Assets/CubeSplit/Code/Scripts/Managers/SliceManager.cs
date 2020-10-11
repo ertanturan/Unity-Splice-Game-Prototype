@@ -4,7 +4,7 @@ using UnityEngine;
 public class SliceManager : SceneSingleton<SliceManager>
 {
 
-    public void Slice(GameObject objectToSlice, Material material, Transform slicePoint)
+    public bool Slice(GameObject objectToSlice, Material material, Transform slicePoint)
     {
         //Transform slicePoint = ((MeshSliceShowcase)target).transform;
         SlicedHull hull = objectToSlice.Slice(slicePoint.position, slicePoint.forward, material);
@@ -22,8 +22,11 @@ public class SliceManager : SceneSingleton<SliceManager>
             upper.AddComponent<Rigidbody>();
 
             AudioManager.Instance.PlaySlice();
+            return true;
 
         }
+
+        return false;
     }
 
 }
