@@ -81,10 +81,21 @@ public class GameManager : SceneSingleton<GameManager>
 
     }
 
-    public void StopGame()
+    public void Fail()
+    {
+        StopGame();
+        UIManager.Instance.ShowFailWindow();
+    }
+
+    private void StopGame()
     {
         IsPlaying = false;
 
+    }
+
+    public void RestartGmae()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
 }
