@@ -668,7 +668,8 @@ PlayerSettings:
   webGLLinkerTarget: 1
   webGLThreadsSupport: 0
   webGLWasmStreaming: 0
-  scriptingDefineSymbols: {}
+  scriptingDefineSymbols:
+    7: AURA_IN_PROJECT;AURA_IN_SCENEVIEW
   platformArchitecture:
     iOS: 2
   scriptingBackend: {}
