@@ -7,7 +7,7 @@ public class SliceManager : SceneSingleton<SliceManager>
     public void Slice(GameObject objectToSlice, Material material, Transform slicePoint)
     {
         //Transform slicePoint = ((MeshSliceShowcase)target).transform;
-        SlicedHull hull = objectToSlice.Slice(slicePoint.position, slicePoint.right, material);
+        SlicedHull hull = objectToSlice.Slice(slicePoint.position, slicePoint.forward, material);
         if (hull != null)
         {
 

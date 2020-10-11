@@ -7,7 +7,7 @@ public class Player : SceneSingleton<Player>
 
     private void Awake()
     {
-        GetComponent<Renderer>().material.SetColor("_Color", GameManager.Instance.GetRandomColor());
+        //GetComponent<Renderer>().material.SetColor("_Color", GameManager.Instance.GetRandomColor());
     }
 
     public void Hit(Blade blade)
@@ -84,7 +84,7 @@ public class Player : SceneSingleton<Player>
 
         float angle = Vector3.Angle(dir, transform.right);
 
-        //Debug.Log(angle);
+        Debug.Log(angle);
 
         if (angle < 90)
         {
