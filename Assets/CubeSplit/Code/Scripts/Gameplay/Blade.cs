@@ -11,6 +11,9 @@ public class Blade : MonoBehaviour
         if (hitObj.GetInstanceID() == Player.Instance.gameObject.GetInstanceID())
         {
             Player.Instance.Hit(this);
+
+
+
         }
     }
 

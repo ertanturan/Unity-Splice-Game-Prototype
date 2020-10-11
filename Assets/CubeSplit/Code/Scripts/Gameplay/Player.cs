@@ -12,7 +12,7 @@ public class Player : SceneSingleton<Player>
 
     public void Hit(Blade blade)
     {
-        Debug.Log(CheckAngle(blade));
+        //Debug.Log(CheckAngle(blade));
         //if (CheckAngle(blade))
         //{
         //    //OLD
@@ -22,11 +22,14 @@ public class Player : SceneSingleton<Player>
         ////Debug.Log(hangOver);
         //SplitCubeOnX(blade, hangOver);
 
+        if (CheckAngle(blade))
+        {
+            SliceManager.Instance.Slice(gameObject, GetComponent<Renderer>().material, blade.transform);
+            GameManager.Instance.Fail();
 
-        SliceManager.Instance.Slice(gameObject, GetComponent<Renderer>().material, blade.transform);
+        }
 
 
-        GameManager.Instance.Fail();
         //}
 
 
@@ -84,9 +87,9 @@ public class Player : SceneSingleton<Player>
 
         float angle = Vector3.Angle(dir, transform.right);
 
-        Debug.Log(angle);
+        //Debug.Log(angle);
 
-        if (angle < 90)
+        if (angle > 20)
         {
             return false;
         }
