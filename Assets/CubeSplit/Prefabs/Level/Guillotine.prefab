@@ -91,7 +91,6 @@ GameObject:
   m_Component:
   - component: {fileID: 769335604003350518}
   - component: {fileID: 769335604003350517}
-  - component: {fileID: 162060703894481449}
   m_Layer: 0
   m_Name: Guillotine
   m_TagString: Untagged
@@ -128,22 +127,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68f78854fee1d9c49b2fd7b78d42282f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!54 &162060703894481449
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 769335604003350514}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &1075557131939770394
 GameObject:
   m_ObjectHideFlags: 0
@@ -504,7 +487,7 @@ GameObject:
   - component: {fileID: 7755615170903039741}
   - component: {fileID: 5899814874362229991}
   - component: {fileID: 81011943258010046}
-  - component: {fileID: 8393958873222279315}
+  - component: {fileID: 4146700419608943632}
   m_Layer: 0
   m_Name: Blade
   m_TagString: Untagged
@@ -522,7 +505,8 @@ Transform:
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.008013023, y: -0.28834274, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 4302734425438759887}
   m_Father: {fileID: 862405260954819935}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -604,16 +588,63 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!65 &8393958873222279315
-BoxCollider:
+--- !u!54 &4146700419608943632
+Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6325678786813470710}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!1 &6491050218515466177
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4302734425438759887}
+  - component: {fileID: 365746141691640735}
+  m_Layer: 0
+  m_Name: Collider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4302734425438759887
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6491050218515466177}
+  m_LocalRotation: {x: -0.0000000372529, y: -0, z: -0.22029719, w: 0.9754328}
+  m_LocalPosition: {x: 1.473, y: -1.535, z: 0.000000043176}
+  m_LocalScale: {x: 2.6067, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6846182878864488304}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -25.453001}
+--- !u!65 &365746141691640735
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6491050218515466177}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.843265, y: 1.8399842, z: 0.1}
-  m_Center: {x: -0.008509964, y: -0.8538443, z: 3.124408e-17}
+  m_Size: {x: 1, y: 1, z: 0.1}
+  m_Center: {x: -0.45, y: 0, z: 0}
