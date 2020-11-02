@@ -1,4 +1,4 @@
-# Unity-Splice-Game
+# Unity-Splice-Game-Prototype
 
 
 This project is a basic game prototype .
